@@ -49,18 +49,26 @@ function generateUsersname(dataUser)
 
     let tdCATEGORIE = document.createElement("TD");
     let tdBLAGUE = document.createElement("TD");
-    //let tdEDITION = document.createElement("TD");
+    let tdEDITION = document.createElement("TD");
 
     tdCATEGORIE.innerHTML = dataUser.category;
     if (dataUser.type === "single") {
         tdBLAGUE.innerHTML = dataUser.joke;
     } else {
         tdBLAGUE.innerHTML = dataUser.setup + " " + dataUser.delivery;
-    }    //tdEDITION.innerHTML = dataUser.location.city;
+    }
+
+    // Création du bouton de suppression
+    let btnSupprimer = document.createElement("button");
+    btnSupprimer.textContent = "Supprimer";
+    btnSupprimer.onclick = function() {
+        GeneratedUsersname.remove();
+    };
+    tdEDITION.appendChild(btnSupprimer);
 
     GeneratedUsersname.appendChild(tdCATEGORIE);
     GeneratedUsersname.appendChild(tdBLAGUE);
-    //GeneratedUsersname.appendChild(tdEDITION);
+    GeneratedUsersname.appendChild(tdEDITION);
 
     return GeneratedUsersname;
 }
