@@ -58,13 +58,23 @@ function generateUsersname(dataUser)
         tdBLAGUE.innerHTML = dataUser.setup + " " + dataUser.delivery;
     }
 
-    // Création du bouton de suppression
+    // Création du bouton de suppression individuel
     let btnSupprimer = document.createElement("button");
     btnSupprimer.textContent = "Supprimer";
+    btnSupprimer.className = "btn btn-danger btn-sm";
     btnSupprimer.onclick = function() {
         GeneratedUsersname.remove();
     };
     tdEDITION.appendChild(btnSupprimer);
+
+    // Gestion du bouton Supprimer tout dans l'entête du tableau (hors DOMContentLoaded car le script est chargé après le DOM)
+    const btnSupprimerTout = document.getElementById('btnSupprimerTout');
+    if (btnSupprimerTout) {
+        btnSupprimerTout.addEventListener('click', function() {
+            let blague = document.getElementById('blague');
+            blague.innerHTML = "";
+    });
+}
 
     GeneratedUsersname.appendChild(tdCATEGORIE);
     GeneratedUsersname.appendChild(tdBLAGUE);
