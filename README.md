@@ -1,62 +1,24 @@
-# 🚀 TP - 02. API - Formulaire pour aller requêter une API distante
+# 🎭 API Blague
 
-v 0.5
+Petit projet web qui permet d’afficher des blagues aléatoires en français à partir de l’API [JokeAPI](https://jokeapi.dev).
 
-#tp #api #js
+## 🚀 Fonctionnalités
+- Choisir une **catégorie** de blagues (`dev`, `dark`, `general`, `Any`, etc.)  
+- Choisir le **nombre** de blagues à afficher (1 à 10)  
+- Affichage sous forme de **tableau Bootstrap**  
+- Bouton pour **supprimer une blague** individuellement  
+- Bouton pour **supprimer toutes les blagues**  
 
-## Énoncé
+## 🛠️ Technologies utilisées
+- **HTML5 / CSS3** (avec [Bootstrap 5](https://getbootstrap.com/))  
+- **JavaScript (Fetch API)**  
+- **JokeAPI** pour récupérer les blagues  
 
-En utilisant l'API JokeAPI, vous allez afficher son contenu dans un tableau.
-
-L'application attendue est une page mise en forme (avec le framework CSS que vous voulez).
-
-Elle contiendra un formulaire avec un simple bouton et un tableau vide.
-
-Ce bouton fera un appel à l'API et le contenu récupéré sera ajouté à un tableau de résultats.
-
-Ce tableau pourra être, dans son intégralité, vidé à l'aide d'un bouton.
-
-Chaque ligne de blague pourra être retirée individuellement.
-
-**BONUS:** Ce tableau pourra être sauvegardé en LocalStorage afin qu'il soit réaffiché lors d'une visite ultérieure de l'utilisateur.
-
-### !! Important !!
-
-Les données récupérées doivent impérativement:
-- Être en français
-- Ne pas être à caractère sexuel, sexiste, politique, raciste, religieux, explicite
-
-## Objectifs / Compétences
-
-- Savoir parcourir un tableau d'objets
-  - https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON
-- Découverte et utilisation de JSON
-  - https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON
-- Maîtriser le protocole HTTP
-- Comprendre le mécanisme de requête / réponse
-- Utilisation de `console.log` `console.table`
-- Utilisation des événements Javascript
-
-## Langages utilisés
-
-- HTML
-- Javascript
-- CSS
-
-## Service à utiliser
-
-Vous allez utiliser le service **JokeAPI**.
-
-https://jokeapi.dev/
-
-Ce service (totalement en anglais) vous permet de partir à la recherche de la prochaine boutade que vous pourrez sortir auprès de vos amis, et ainsi briller en société.
-
-**Attention:** ce service propose des calembours dans plusieurs langues. Mais, il propose également de l'humour qui n'aura absolument pas sa place dans ce TP. Ainsi, vous serez sanctionné.e si vous laissez apparaître des galigeades ayant trait sur des sujets sexistes, racistes ou autres thèmes controversés.
-
-## Bibliothèque utilisée
-
-Bootstrap, TailWind, Foundation, Bulma, Material...
-
-## Travail à rendre
-
-Votre application devra être disponible sur votre VM avec le chemin:
+## 📂 Structure
+```text
+03-Blague/
+├── index.html
+└── assets/
+    └── js/
+        └── script.js
+```
